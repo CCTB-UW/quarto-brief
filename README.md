@@ -9,7 +9,7 @@ This quarto extension provides a letter template that adheres to the German [DIN
 Install the extension and example qmd file as follows:
 
 ```bash
-quarto use template mavam/quarto-brief
+quarto use template CCTB-UW/quarto-brief
 ```
 
 Then adapt the example as you see fit.
@@ -73,6 +73,5 @@ For more involved letters, you may want to consider setting `monofont` and
 
 ## Credits
 
-I got inspired by Mickaël Canouil's
-[quarto-letter](https://github.com/mcanouil/quarto-letter) extension, but needed
-something that adheres to DIN 5008.
+This template is adapted from [mavam/quarto-brief](https://github.com/mavam/quarto-brief) which itself is inspired by the
+[quarto-letter](https://github.com/mcanouil/quarto-letter) extension.
