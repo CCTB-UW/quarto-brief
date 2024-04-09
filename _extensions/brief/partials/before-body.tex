@@ -1,4 +1,10 @@
 \setkomavar{fromname}{$author$}
+\newkomavar{company}
+\setkomavar{company}{Universität Würzburg}
+\newkomavar{department}
+\setkomavar{department}{Center for Computational and Theoretical Biology}
+\newkomavar{departmentshort}
+\setkomavar{departmentshort}{CCTB}
 
 % We currently format the address in German layout. There might be a more
 % powerful way to synthesize language-agnostic address block.
@@ -47,6 +53,38 @@ $endif$
 
 $if(subject)$
 \setkomavar{subject}{$subject$}
+$endif$
+
+\addtokomafont{fromaddress}{\small}
+$if(formal)$
+\setkomavar{fromlogo}{\includegraphics[width=\textwidth]{_extensions/CCTB-UW/brief/Uni_CCTB_Logo}}
+\setkomavar{firsthead}{\raggedleft % <==================================
+  \usekomafont{fromaddress}
+  \usekomavar{fromlogo}\\[+.1cm]
+  \usekomavar{company}\\
+  \usekomavar{department}\\
+  \usekomavar{fromname}\\
+  \usekomavar{fromaddress}\\
+  \usekomavar{fromphone}\\
+  \usekomavar{fromemail}\\% <===========================================
+}
+$else$
+\setkomavar{fromlogo}{\includegraphics[width=.4\textwidth]{_extensions/CCTB-UW/brief/CCTB_Logo}}
+\setkomavar{firsthead}{%
+  \usekomafont{fromaddress}
+  \begin{tabular}[c]{@{}l}
+    \usekomavar{fromlogo}
+  \end{tabular}%
+  \hfill
+  \begin{tabular}[c]{r@{}}
+  \usekomavar{company}\\
+  \usekomavar{department}\\
+  \usekomavar{fromname}\\
+  \usekomavar{fromaddress}\\
+  \usekomavar{fromphone}\\
+  \usekomavar{fromemail}\\% <===========================================
+  \end{tabular}%
+}
 $endif$
 
 $if(signature)$
