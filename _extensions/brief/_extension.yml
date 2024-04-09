@@ -9,12 +9,16 @@ contributes:
       date-format: long
     pdf:
       lang: de
+        #      keep-tex: true # usefull for debugging
       babel-lang: ngerman
       documentclass: scrlttr2
       classoption:
+        - DIN
         - paper=A4
         - fromalign=right # Ausrichtung des Briefkopfes
         - version=last
+        - fromlogo=true
+        - firsthead=true
       include-in-header:
         - text: |
             \usepackage{eurosym}
