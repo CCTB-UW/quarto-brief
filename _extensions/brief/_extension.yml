@@ -19,6 +19,8 @@ contributes:
         - version=last
         - fromlogo=true
         - firsthead=true
+        - firstfoot=false
+        - enlargefirstpage
       include-in-header:
         - text: |
             \usepackage{eurosym}
